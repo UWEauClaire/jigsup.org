@@ -179,5 +179,6 @@ span.error {
   text-align: right;
   font-size:1em;
   color: rgb(192,192,192);
+  margin-right: 10px;
 
 }
