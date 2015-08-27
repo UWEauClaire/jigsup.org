@@ -110,26 +110,25 @@
 			<div class="contactForm"> <!-- SPACING ISSUES WITH BUTTON AND HEADER -->
 				<form id="contact_form" action="http://formspree.io/recreation@uwec.edu" method="POST" onsubmit="return validateForm();" enctype="multipart/form-data">
 					<div class="row">
-						<h2>Have any questions? Send us a message!</h2>
-						<label class="required" for="name">Your name:</label><br />
-						<input id="name" name="name" type="text" value="" size="30" /><br />
-						<span id="name_validation" class="error"></span>
-					</div> <!-- #row  -->
-					<div class="row">
-						<label class="required" for="email">Your email:</label><br />
-						<input id="email" name="email" type="text" value="" size="30" /><br />
-						<span id="email_validation" class="error"></span>
-					</div> <!-- #row  -->
-					<div class="row">
-						<label for="phone">Your phone number:</label><br />
-						<input id="phone" name="phone" type="text" value="" size="30" /><br />
-					</div> <!-- #row  -->
-					<div class="row">
-						<label class="required" for="message">Your message:</label><br />
-						<textarea id="message" name="message" rows="7" cols="30"></textarea><br />
-						<span id="message_validation" class="error"></span>
-					<input type="submit" value="Send email" />
-					</div> <!-- #row  -->
+						<div class="col-sm-12">
+							<h2>Have any questions? Send us a message!</h2>
+							<label class="required" for="name">Your name:</label><br />
+							<input id="name" name="name" type="text" value="" size="30" /><br />
+							<span id="name_validation" class="error"></span>
+
+							<label class="required" for="email">Your email:</label><br />
+							<input id="email" name="email" type="text" value="" size="30" /><br />
+							<span id="email_validation" class="error"></span>
+
+							<label for="phone">Your phone number:</label><br />
+							<input id="phone" name="phone" type="text" value="" size="30" /><br />
+
+							<label class="required" for="message">Your message:</label><br />
+							<textarea id="message" name="message" rows="7" cols="30"></textarea><br />
+							<span id="message_validation" class="error"></span>
+							<input type="submit" value="Send email" />
+						</div> <!-- #col  -->
+					</div> <!-- #row -->
 				</form> <!-- #contact_form  -->
 			</div>  <!-- #contactForm  -->
 		</div> <!-- #container  -->
