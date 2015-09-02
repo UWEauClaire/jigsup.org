@@ -52,7 +52,7 @@ html {
 
 .navbar-nav >li > a:focus, .navbar-inverse .navbar-nav>li>a:hover {
 	background-color:transparent;
-	color:green;
+	color:green !important;
 }
 
 .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
@@ -180,5 +180,11 @@ span.error {
   font-size:1em;
   color: rgb(192,192,192);
   margin-right: 10px;
+
+}
+
+a.dropdown-toggle.navcol {
+
+color: #2B3E85 !important ;
 
 }
