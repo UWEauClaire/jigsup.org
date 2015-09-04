@@ -202,5 +202,8 @@ li.dropdown:hover {
 
 .headers {
   color: #21409A;
+}
 
+h3, h4 {
+  display: inline;
 }
