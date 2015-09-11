@@ -1,3 +1,4 @@
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css');
 body {
     padding-top:50px;
     background-color:#FEFCFB;
@@ -211,4 +212,41 @@ h3, h4 {
 .thanks {
   text-align: center;
   margin-top: 10%;
+}
+
+.list {
+font-size: 1.1em;
+
+}
+
+.btn  {
+  margin-top: 0.5%;
+}
+
+
+
+.togglebox {
+  width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  transform: translateZ(0);
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.label2 {
+  position: relative;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
 }
