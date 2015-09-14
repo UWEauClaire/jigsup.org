@@ -250,3 +250,20 @@ input[type="radio"] {
   background: #fff;
   cursor: pointer;
 }
+
+.panel-group {
+  width: 60%;
+}
+
+.panel {
+  background-color: #f5f5f5 ;
+}
+
+.panel-body {
+  background-color: white;
+}
+
+.expand-arrow {
+float: right;
+
+}
