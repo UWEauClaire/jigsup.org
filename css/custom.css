@@ -252,7 +252,8 @@ input[type="radio"] {
 }
 
 .panel-group {
-  width: 60%;
+
+  padding-left: 0px;
 }
 
 .panel {
