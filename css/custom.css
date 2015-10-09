@@ -36,6 +36,7 @@ html {
 .navbar-inverse .navbar-brand {
     color: #2B3E85;
     font-size: 1.6em;
+    margin-top: -15px;
 }
 
 .fbook {
