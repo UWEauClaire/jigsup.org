@@ -305,6 +305,35 @@ float: right;
 }
 
 .rules {
-
   font-size:1.3em;
+}
+
+/* Button Animation */
+.btn1, .btn2 {
+  position: relative;
+  font-family: helvetica;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  background: #2b3e85; /* Background Color*/
+  border: 1px solid #2b3e85; /* Border Color*/
+  color: #edac1a; /* Text Color*/
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  text-align: center;
+}
+
+.btn1:hover {
+  background: #edac1a; /* Background Color*/
+  color: #2b3e85; /* Text Color*/
+  border: 1px solid #edac1a; /* Border Color*/
 }
