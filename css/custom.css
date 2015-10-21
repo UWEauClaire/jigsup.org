@@ -19,7 +19,6 @@ html {
 	background-color: #CCC;
 }
 
-
 .navbar-nav{
 	float: right;
 }
@@ -36,7 +35,7 @@ html {
 .navbar-inverse .navbar-brand {
     color: #2B3E85;
     font-size: 1.6em;
-    margin-top: -15px;
+    margin-top: -10px;
 }
 
 .fbook {
@@ -58,9 +57,6 @@ html {
 }
 
 
-
-
-
 @media screen and (max-width: 767px) {
 .navbar-nav {
   float:left;
@@ -68,7 +64,6 @@ html {
 	margin-left: 45%;
 }
 }
-
 .navbar-toggle {
     background-color:#000;
     margin-top:15px;
@@ -287,7 +282,6 @@ input[type="radio"] {
 }
 
 .panel-group {
-
   padding-left: 0px;
 }
 
@@ -301,7 +295,6 @@ input[type="radio"] {
 
 .expand-arrow {
 float: right;
-
 }
 
 .rules {
@@ -336,4 +329,13 @@ float: right;
   background: #edac1a; /* Background Color*/
   color: #2b3e85; /* Text Color*/
   border: 1px solid #edac1a; /* Border Color*/
+}
+
+.horizbar {
+  background: #edac1a;
+  z-index: -10;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  margin-top: -75px;
 }
