@@ -231,15 +231,12 @@ h3, h4 {
 }
 
 .list {
-font-size: 1.1em;
-
+  font-size: 1.1em;
 }
 
 .btn  {
   margin-top: 0.5%;
 }
-
-
 
 .togglebox {
   width: 800px;
@@ -280,7 +277,7 @@ input[type="radio"] {
 }
 
 .expand-arrow {
-float: right;
+  float: right;
 }
 
 .rules {
