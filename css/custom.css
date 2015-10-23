@@ -339,3 +339,24 @@ input[type="radio"] {
   width: 250px;
   height: auto;
 }
+
+.btn-center {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.sponsorBar {
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.sponsorBarImg {
+  margin: 1%;
+  width: 100px;
+  height: auto;
+  opacity: 0.50;
+}
+
+.sponsorBarImg:hover {
+  opacity: 1.0;
+}
