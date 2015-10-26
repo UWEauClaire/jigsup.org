@@ -40,8 +40,8 @@ html {
 
 .fbook {
 	padding-top:6px !important;
-    margin-top: 0px;
-    padding-right: 1px !important;
+  margin-top: 0px;
+  padding-right: 1px !important;
 
 }
 
@@ -52,7 +52,7 @@ html {
 }
 
 .navbar-nav >li > a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-	background-color:transparent;
+	background-color:transparent !important;
 	color: #2B3E85 !important;
 }
 
@@ -65,13 +65,15 @@ html {
 }
 }
 .navbar-toggle {
-    background-color:#000;
-    margin-top:15px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: transparent !important;
+    padding: 0px;
 }
 
 .dropdown:hover .dropdown-menu{  /*Hover Dropwdown menu*/
     display: block;
-
  }
 
  #image {
