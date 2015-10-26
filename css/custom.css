@@ -47,8 +47,8 @@ html {
 
 .twitter {
 	padding-top:7px !important;
-    margin-top: 0px;
-    padding-right: 0px !important;
+  margin-top: 0px;
+  padding-right: 0px !important;
 }
 
 .navbar-nav >li > a:focus, .navbar-inverse .navbar-nav>li>a:hover {
@@ -56,14 +56,41 @@ html {
 	color: #2B3E85 !important;
 }
 
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+    max-height: 400px;
+}
+
+
+
 
 @media screen and (max-width: 767px) {
 .navbar-nav {
   float:left;
-	text-align: center;
-	margin-left: 45%;
+	text-align: left;
 }
+.navbar-inverse .navbar-nav > li > a {
+    color: #2B3E85;
+    font-size: 3em;
+    margin-top: 30px;
 }
+.fbook {
+	padding-top:6px !important;
+  margin-top: 0px;
+  padding-right: 1px !important;
+  float: left;
+}
+
+.twitter {
+	padding-top:7px !important;
+  margin-top: 0px;
+  padding-right: 0px !important;
+  float: left;
+}
+
+}
+
+
+
 .navbar-toggle {
     margin-top: 12px;
     margin-bottom: 15px;
