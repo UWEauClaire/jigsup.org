@@ -1,5 +1,6 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,11 +49,11 @@
       <div class="navbar-header">
         <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
           <span class="menuTrigger" id="hamburger-one">
-              <span class="mainLine"></span>
-            </span>
+            <span class="mainLine"></span>
+          </span>
         </button>
         <a class="navbar-brand" href="index.html">
-          <img src="images/logo.png" />
+          <img alt="logo" src="images/logo.png" />
         </a>
         <!-- Logo top aligns with navbar text top. -->
       </div>
@@ -81,17 +82,17 @@
           <li class="navcol"><a href="contact.html">Contact</a></li>
           <li class="social-media">
             <a target="_blank" class="fbook" href="https://www.facebook.com/pages/The-Jigs-Up-Ice-Fishing-Contest/736663866412522">
-              <img src="images/facebook.png" class="fbook" </img>
+              <img alt="Facebook Logo" src="images/facebook.png" class="fbook" </img>
             </a>
           </li>
           <li>
-            <a target="_blank" class="twitter" href="https://twitter.com/uwecrecreation">
+            <a alt="Twitter Logo" target="_blank" class="twitter" href="https://twitter.com/uwecrecreation">
               <img src="images/twitter.png" class="twitter" </img>
             </a>
           </li>
           <li>
             <a target="_blank" class="twitter" href="https://instagram.com/UWEC_Recreation/">
-              <img src="images/instagram.png" class="fbook" </img>
+              <img alt="Instagram Logo" src="images/instagram.png" class="fbook" </img>
             </a>
           </li>
         </ul>
@@ -101,171 +102,228 @@
     <!-- /.container -->
   </nav>
 </head>
+
 <body>
-	<br /> <!-- BREAK -->
-	<br /> <!-- BREAK -->
-	<br /> <!-- BREAK -->
-	<br /> <!-- BREAK -->
-	<section id="contactForm">
-		<div class= "container">
-			<div class="contactForm">
-				<form id="contact_form" action="http://formspree.io/recreation@uwec.edu" method="POST" onsubmit="return validateForm();" enctype="multipart/form-data">
-					<div class="row">
-						<div class="col-md-6">
-							<h3 class="headers">Contact Us!</h3>
-							<br /> <!-- BREAK -->
-              <br /> <!-- BREAK -->
-							<label class="required" for="name">Your name:</label><br />
-							<input required id="name" name="name" type="text" value="" size="30" /><br />
+  <br />
+  <!-- BREAK -->
+  <br />
+  <!-- BREAK -->
+  <br />
+  <!-- BREAK -->
+  <br />
+  <!-- BREAK -->
+  <section id="contactForm">
+    <div class="container">
+      <div class="contactForm">
+        <form id="contact_form" action="http://formspree.io/recreation@uwec.edu" method="POST" onsubmit="return validateForm();" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="headers">Contact Us!</h3>
+              <br />
+              <!-- BREAK -->
+              <br />
+              <!-- BREAK -->
+              <label class="required" for="name">Your name:</label>
+              <br />
+              <input required id="name" name="name" type="text" value="" size="30" />
+              <br />
 
-							<label class="required" for="email">Your email:</label><br />
-							<input required type="email"  id="email" name="email" type="text" value="" size="30" /><br />
+              <label class="required" for="email">Your email:</label>
+              <br />
+              <input required type="email" id="email" name="email" type="text" value="" size="30" />
+              <br />
 
-							<label for="phone">Your phone number:</label><br />
-							<input  id="phone" name="phone" type="text" value="" size="30" /><br />
+              <label for="phone">Your phone number:</label>
+              <br />
+              <input id="phone" name="phone" type="text" value="" size="30" />
+              <br />
 
-							<label class="required" for="message">Your message:</label><br />
-							<textarea required id="message" name="message" rows="7" cols="60"></textarea><br />
+              <label class="required" for="message">Your message:</label>
+              <br />
+              <textarea required id="message" name="message" rows="7" cols="60"></textarea>
+              <br />
 
-							<button type="submit" class="btn btn-primary" value="Send">Send</button>
-						</div> <!-- #col  -->
-						<div class="col-md-6">
+              <button type="submit" class="btn btn-primary" value="Send">Send</button>
+            </div>
+            <!-- #col  -->
+            <div class="col-md-6">
               <div class="visible-sm visible-xs">
-  	             <br /> <!-- BREAK -->
+                <br />
+                <!-- BREAK -->
               </div>
-  	          <h3 class="headers">Committee Members</h3>
-              <br /> <!-- BREAK -->
-              <br /> <!-- BREAK -->
-            	<div class="table-responsive">
-            		<table class="table">
-            			<thead>
-            				<tr>
-            					<th>Name</th>
-            					<th>Organization</th>
-            				</tr>
-            			</thead>
-            			<tbody>
-            				<tr>
-            					<td>Shari Breed</td>
-            					<td>Bluegold Recreation</td>
-            					</tr>
-            				<tr>
-            					<td>Tammy Brunschmid</td>
-            					<td>Blugold Recreation</td>
-            				</tr>
-            				<tr>
-            					<td>Maggie Cook</td>
-            					<td>Gordy's Market</td>
-            				</tr>
-            				<tr>
-            					<td>Bill Cunningham</td>
-            					<td>Wissota Lions Club</td>
-            				</tr>
-            				<tr>
-            					<td>Chuck Daly</td>
-            					<td>Wissota Lions Club</td>
-            				</tr>
-            				<tr>
-            					<td>Ben Halder</td>
-            					<td>UWEC Athletics</td>
-            				</tr>
-            				<tr>
-            					<td>Andy Jepsen</td>
-            					<td>Blugold Recreation</td>
-            				</tr>
-            				<tr>
-            					<td>Jamie Kane</td>
-            					<td>Scheels</td>
-            				</tr>
-            				<tr>
-            					<td>Jill Millis</td>
-            					<td>UWEC Athletics</td>
-            				</tr>
-            				<tr>
-            					<td>Carl Mothes</td>
-            					<td>Wissota Lions Club</td>
-            				</tr>
-            				<tr>
-            					<td>Sheryl Poirier</td>
-            					<td>Blugold Recreation</td>
-            				</tr>
-            				<tr>
-            					<td>Dave Prescher</td>
-            					<td>Wissota Lions Club</td>
-            				</tr>
-            				<tr>
-            					<td>Matt Selvig</td>
-            					<td>Gordy's Market</td>
-            				</tr>
-            				<tr>
-            					<td>Dan Schumacher</td>
-            					<td>UWEC Athletics</td>
-            				</tr>
-            				<tr>
-            					<td>Troy Terhark</td>
-            					<td>Blugold Recreation</td>
-            				</tr>
-            				<tr>
-            					<td>Jan Thorsen</td>
-            					<td>Blugold Recreation</td>
-            				</tr>
-            				<tr>
-            					<td>Al Wiberg</td>
-            					<td>Blugold Recreation</td>
-            				</tr>
-              		</tbody>
-              	</table>
-            	</div>
-            </div> <!--#col-md-6 -->
-	          <br /> <!-- BREAK -->
-					</div> <!-- #row -->
-				</form> <!-- #contact_form  -->
-			</div>  <!-- #contactForm  -->
-		</div> <!-- #container  -->
-	<br /> <!-- BREAK -->
-	<br /> <!-- BREAK -->
-	<br /> <!-- BREAK -->
-	<br /> <!-- BREAK -->
-	</section>  <!-- #contactForm  -->
+              <h3 class="headers">Committee Members</h3>
+              <br />
+              <!-- BREAK -->
+              <br />
+              <!-- BREAK -->
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Organization</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Shari Breed</td>
+                      <td>Bluegold Recreation</td>
+                    </tr>
+                    <tr>
+                      <td>Tammy Brunschmid</td>
+                      <td>Blugold Recreation</td>
+                    </tr>
+                    <tr>
+                      <td>Maggie Cook</td>
+                      <td>Gordy's Market</td>
+                    </tr>
+                    <tr>
+                      <td>Bill Cunningham</td>
+                      <td>Wissota Lions Club</td>
+                    </tr>
+                    <tr>
+                      <td>Chuck Daly</td>
+                      <td>Wissota Lions Club</td>
+                    </tr>
+                    <tr>
+                      <td>Ben Halder</td>
+                      <td>UWEC Athletics</td>
+                    </tr>
+                    <tr>
+                      <td>Andy Jepsen</td>
+                      <td>Blugold Recreation</td>
+                    </tr>
+                    <tr>
+                      <td>Jamie Kane</td>
+                      <td>Scheels</td>
+                    </tr>
+                    <tr>
+                      <td>Jill Millis</td>
+                      <td>UWEC Athletics</td>
+                    </tr>
+                    <tr>
+                      <td>Carl Mothes</td>
+                      <td>Wissota Lions Club</td>
+                    </tr>
+                    <tr>
+                      <td>Sheryl Poirier</td>
+                      <td>Blugold Recreation</td>
+                    </tr>
+                    <tr>
+                      <td>Dave Prescher</td>
+                      <td>Wissota Lions Club</td>
+                    </tr>
+                    <tr>
+                      <td>Matt Selvig</td>
+                      <td>Gordy's Market</td>
+                    </tr>
+                    <tr>
+                      <td>Dan Schumacher</td>
+                      <td>UWEC Athletics</td>
+                    </tr>
+                    <tr>
+                      <td>Troy Terhark</td>
+                      <td>Blugold Recreation</td>
+                    </tr>
+                    <tr>
+                      <td>Jan Thorsen</td>
+                      <td>Blugold Recreation</td>
+                    </tr>
+                    <tr>
+                      <td>Al Wiberg</td>
+                      <td>Blugold Recreation</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!--#col-md-6 -->
+            <br />
+            <!-- BREAK -->
+          </div>
+          <!-- #row -->
+        </form>
+        <!-- #contact_form  -->
+      </div>
+      <!-- #contactForm  -->
+    </div>
+    <!-- #container  -->
+    <br />
+    <!-- BREAK -->
+    <br />
+    <!-- BREAK -->
+    <br />
+    <!-- BREAK -->
+    <br />
+    <!-- BREAK -->
+  </section>
+  <!-- #contactForm  -->
 
   <div class="sponsorBar">
-    <a href="http://www.gordyscountymarket.net" target="_blank"><img class="sponsorBarImg" src="images\sponsors\gordysLarge.png" alt="Gordy's County Market"></a>
-    <a href="http://www.scheels.com" target="_blank"><img class="sponsorBarImg" src="images\sponsors\scheelsLarge.png" alt="Scheels"></a>
-    <a href="http://www.geteskimo.com/" target="_blank"><img class="sponsorBarImg" src="images\sponsors\eskimo.png" alt="Eskimo Ice Fishing Gear"></a>
-    <a href="http://www.leinie.com" target="_blank"><img class="sponsorBarImg" src="images\sponsors\lein.png" alt="Leinenkugel's"> </a>
-    <a href="http://www.stumpshotolives.com" target="_blank"><img class="sponsorBarImg" src="images\sponsors\stumps.png" alt="Stump's Spicy Hot Food and Beverages"></a>
-    <a href="http://www.prestigeautocorp.com" target="_blank"><img class="sponsorBarImg" src="images\sponsors\prestige.png" alt="Presitge Auto Corportation"></a>
-    <a href="http://www.uwec.edu/dining/" target="_blank"><img class="sponsorBarImg" src="images\sponsors\dining.png" alt="Blugold Dining by Sodexo">
-    <a href="http://www.pepsi.com/" target="_blank"><img class="sponsorBarImg" src="images\sponsors\pepsi.png" alt="Pepsi"></a>
-    <a href="http://www.eauclaireford.com/" target="_blank"><img class="sponsorBarImg" src="images\sponsors\ford.png" alt="Ford"></a>
-    <a href="http://www.theedgepubandeatery.com/" target="_blank"><img class="sponsorBarImg" src="images\sponsors\edge.png" alt="Ford"></a>
-    <a href="https://www.facebook.com/wissota.view.5" target="_blank"><img class="sponsorBarImg" src="images\sponsors\view.png" alt="Ford"></a>
+    <a href="http://www.gordyscountymarket.net" target="_blank">
+      <img class="sponsorBarImg" src="images\sponsors\gordysLarge.png" alt="Gordy's County Market">
+    </a>
+    <a href="http://www.scheels.com" target="_blank">
+      <img class="sponsorBarImg" src="images\sponsors\scheelsLarge.png" alt="Scheels">
+    </a>
+    <a href="http://www.geteskimo.com/" target="_blank">
+      <img class="sponsorBarImg" src="images\sponsors\eskimo.png" alt="Eskimo Ice Fishing Gear">
+    </a>
+    <a href="http://www.leinie.com" target="_blank">
+      <img class="sponsorBarImg" src="images\sponsors\lein.png" alt="Leinenkugel's"> </a>
+    <a href="http://www.stumpshotolives.com" target="_blank">
+      <img class="sponsorBarImg" src="images\sponsors\stumps.png" alt="Stump's Spicy Hot Food and Beverages">
+    </a>
+    <a href="http://www.prestigeautocorp.com" target="_blank">
+      <img class="sponsorBarImg" src="images\sponsors\prestige.png" alt="Presitge Auto Corportation">
+    </a>
+    <a href="http://www.uwec.edu/dining/" target="_blank">
+      <img class="sponsorBarImg" src="images\sponsors\dining.png" alt="Blugold Dining by Sodexo">
+      <a href="http://www.pepsi.com/" target="_blank">
+        <img class="sponsorBarImg" src="images\sponsors\pepsi.png" alt="Pepsi">
+      </a>
+      <a href="http://www.eauclaireford.com/" target="_blank">
+        <img class="sponsorBarImg" src="images\sponsors\ford.png" alt="Ford">
+      </a>
+      <a href="http://www.theedgepubandeatery.com/" target="_blank">
+        <img class="sponsorBarImg" src="images\sponsors\edge.png" alt="Ford">
+      </a>
+      <a href="https://www.facebook.com/wissota.view.5" target="_blank">
+        <img class="sponsorBarImg" src="images\sponsors\view.png" alt="Ford">
+      </a>
   </div>
-  <br /> <!-- BREAK -->
-  <br /> <!-- BREAK -->
+  <br />
+  <!-- BREAK -->
+  <br />
+  <!-- BREAK -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="js/lib/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="js/main.js" type="text/javascript"></script>
- </body>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="js/lib/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+</body>
 
 <footer>
-   <div class="footer hidden-xs">
-     <br /> <!-- BREAK -->
-     <p>
-       Recreation | Hilltop 105 | Eau Claire, WI 54702 | 715-836-3377 | <a href="mailto:recreation@uwec.edu">recreation@uwec.edu</a>
-       <br /> <!-- BREAK -->
-     </p>
-   </div>
-   <div class="footer visible-xs">
-     <br /> <!-- BREAK -->
-     <p class="small-footer">
-       Recreation | Hilltop 105 | Eau Claire, WI 54702 | 715-836-3377 | <a href="mailto:recreation@uwec.edu">recreation@uwec.edu</a>
-       <br /> <!-- BREAK -->
-     </p>
-   </div>
+  <div class="footer hidden-xs">
+    <br />
+    <!-- BREAK -->
+    <p>
+      Recreation | Hilltop 105 | Eau Claire, WI 54702 | 715-836-3377 | <a href="mailto:recreation@uwec.edu">recreation@uwec.edu</a>
+      <br />
+      <!-- BREAK -->
+    </p>
+  </div>
+  <div class="footer visible-xs">
+    <br />
+    <!-- BREAK -->
+    <p class="small-footer">
+      Recreation | Hilltop 105 | Eau Claire, WI 54702 | 715-836-3377 | <a href="mailto:recreation@uwec.edu">recreation@uwec.edu</a>
+      <br />
+      <!-- BREAK -->
+    </p>
+  </div>
 </footer>
+
 </html>
