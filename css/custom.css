@@ -18,6 +18,7 @@ html {
 	height:400px;
 	background-color: #CCC;
 }
+
 /* Navigation Bar */
 .navbar-nav{
 	float: right;
@@ -52,7 +53,6 @@ html {
   height: 37px;
   width: auto;
 }
-
 
 .twitter {
 	padding-top:7px !important;
@@ -445,4 +445,10 @@ input[type="radio"] {
 
 .sponsorBarImg:hover {
   opacity: 1.0;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
