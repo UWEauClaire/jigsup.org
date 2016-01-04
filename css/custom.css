@@ -441,6 +441,10 @@ input[type="radio"] {
   width: 75px;
   height: auto;
   opacity: 0.50;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .sponsorBarImg:hover {
@@ -451,4 +455,9 @@ input[type="radio"] {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.prizeHeaderImg {
+  width: 100%;
+  height: auto;
 }
