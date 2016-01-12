@@ -461,3 +461,20 @@ input[type="radio"] {
   width: 100%;
   height: auto;
 }
+
+.carousel1 {
+    background: #2f4357;
+    margin-top: 20px;
+}
+
+.carousel1 .item img {
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+
+.bs-example1 {
+	margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+}
