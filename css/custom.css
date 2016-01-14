@@ -128,8 +128,6 @@ html {
   }
 }
 
-
-
 .navbar-toggle {
     margin-top: 12px;
     margin-bottom: 15px;
@@ -137,8 +135,6 @@ html {
     background-color: transparent !important;
     padding: 0px;
 }
-
-
 
 .dropdown .dropdown-menu{
   display: inline-block;
@@ -211,7 +207,6 @@ span.error {
 }
 
 /* Flexible iFrame */
-
 .Flexible-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -239,6 +234,7 @@ span.error {
   padding-top: 25px;
   height: 0;
 }
+
 .videowrapper iframe {
   position: absolute;
   top: 0;
