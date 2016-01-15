@@ -74,9 +74,16 @@ html {
 }
 
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
-    max-height: 400px;
+    max-height: 500px;
 }
 
+.navbar-collapse.in {
+  overflow-y: inherit !important;
+  clip: rect(10px, 20px, 30px, 40px);
+}
+#bs-example-navbar-collapse-1 {
+  clip: rect(10px, 20px, 30px, 40px);
+}
 
 /* Navigation Bar Hover Animation */
 .sliding-middle-out {
@@ -103,8 +110,8 @@ html {
 
 @media screen and (max-width: 767px) {
   .navbar-nav {
-    float:left;
-  	text-align: left;
+    float:right;
+    text-align: right;
   }
 
   .navbar-inverse .navbar-nav > li > a {
