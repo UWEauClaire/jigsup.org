@@ -33,7 +33,7 @@ html {
 }
 
 .navbar-inverse {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -133,6 +133,25 @@ html {
     padding-right: 0px !important;
     float: left;
   }
+
+  /* Navigation Bar Hover Animation */
+  .sliding-middle-out {
+  	display: inline-block;
+  	position: relative;
+  	padding-bottom: 3px;
+  }
+
+  .sliding-middle-out:after {
+  	content: '';
+  	display: block;
+  	margin: auto;
+  	height: 0px;
+  	width: 0px;
+  }
+
+  .sliding-middle-out:hover:after {
+  	width: 0%;
+  }
 }
 
 .navbar-toggle {
@@ -165,11 +184,11 @@ html {
  }
 
 .footer {
-	position: absolute;
 	bottom: 0;
 	width: 100%;
 	/* Set the fixed height of the footer here */
-	height: 80px;
+	height: 100px;
+  margin-top: 40px;
 	background-color:#FFFFFF;
 	border-top: 2px solid #CCC;
 	text-align: center;
@@ -195,6 +214,7 @@ html {
 	text-align: center;
 	font-size: 1em;
 	font-weight: 200;
+  margin-top: 40px;
 	width: 100%;
 	background-color: #FFFFFF !important;
 }
