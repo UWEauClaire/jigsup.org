@@ -183,13 +183,17 @@ html {
    width: 100%;
  }
 
+ .wrapper {
+   min-height: calc(100vh - 158px);
+ }
+
 .footer {
 	bottom: 0;
 	width: 100%;
 	/* Set the fixed height of the footer here */
 	height: 100px;
   margin-top: 40px;
-	background-color:#FFFFFF;
+	background-color: white !important;
 	border-top: 2px solid #CCC;
 	text-align: center;
 	font-weight: 200;
@@ -216,7 +220,7 @@ html {
 	font-weight: 200;
   margin-top: 40px;
 	width: 100%;
-	background-color: #FFFFFF !important;
+	background-color: #white !important;
 }
 
 #email_validation, #name_validation {
@@ -457,6 +461,7 @@ input[type="radio"] {
   left: 0px;
   width: 100%;
   text-align: center;
+  background-color: white;
 }
 
 .sponsorBarResults {
