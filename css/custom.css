@@ -3,6 +3,33 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 
+/*slider  */
+.main-text
+{
+position: absolute;
+top: 50px;
+width: 96.66666666666666%;
+color: #FFF;
+}
+.btn-min-block
+{
+min-width: 170px;
+line-height: 26px;
+}
+.btn-clear
+{
+color: #FFF;
+background-color: transparent;
+border-color: #FFF;
+margin-right: 15px;
+}
+.btn-clear:hover
+{
+color: #000;
+background-color: #FFF;
+}
+/*slider   */
+
 body {
     padding-top:50px;
     background-color:#FEFCFB;
