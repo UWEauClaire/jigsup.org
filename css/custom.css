@@ -548,3 +548,31 @@ iframe {
   width: 100%;
   height: 750px;
 }
+
+
+.fwb-logos {
+  height: 70px;
+  width: auto;
+  margin-left: 25px;
+}
+
+.fwb-logos-lw {
+  height: 110px;
+  width: auto;
+  margin-left: 17px;
+}
+
+.fwb-logos-ath {
+  height: 60px;
+  width: auto;
+  margin-left: 15px;
+}
+
+.fwb-logos-all {
+  width: 330px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 900;
+  position: relative;
+  top: -153px;
+}
