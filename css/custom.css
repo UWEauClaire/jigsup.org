@@ -4,6 +4,11 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 
 /*slider  */
+
+.carousel-indicators {
+  height: 0px;
+  width: 0px;
+}
 .main-text
 {
 position: absolute;
@@ -329,7 +334,7 @@ li.dropdown:hover {
   background-color: #eee;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1800px) {
   .navbar-nav .open .dropdown-menu {
     background-color: #fff;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
