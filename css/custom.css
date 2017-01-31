@@ -598,5 +598,10 @@ iframe {
 
 .img-med {
   height: auto;
-  width: 150px;
+  width: 125px;
+}
+
+.img-sm {
+  height: auto;
+  width: 100px;
 }
