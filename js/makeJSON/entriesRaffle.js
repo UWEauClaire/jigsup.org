@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-var fileOutput = '2014FishPrizeWinner.json';
+var fileOutput = '2015RaffleWinner.json';
 
 var fetchNotes = () => {
   try {
@@ -15,16 +15,14 @@ var saveNotes = (notes) => {
   fs.writeFileSync(fileOutput, JSON.stringify(notes));
 };
 
-var addNote = (pos, name, weight, species, prize) => {
+var addNote = (pos,name,prize) => {
   var notes = fetchNotes();
   var note = {
     pos,
     name,
-    weight,
-    species,
     prize
   };
-  var duplicateNotes = notes.filter((note) => note.pos === pos);
+  var duplicateNotes = notes.filter((note) => note.name === name);
   if (duplicateNotes.length === 0) {
     notes.push(note);
     saveNotes(notes);
@@ -36,15 +34,15 @@ var getAll = () => {
   return fetchNotes();
 };
 
-var getNote = (pos) => {
+var getNote = (name) => {
   var notes = fetchNotes();
-  var filteredNotes = notes.filter((note) => note.pos === pos);
+  var filteredNotes = notes.filter((note) => note.name === name);
   return filteredNotes[0];
 };
 
-var removeNote = (pos) => {
+var removeNote = (name) => {
   var notes = fetchNotes();
-  var filteredNotes = notes.filter((note) => note.pos !== pos);
+  var filteredNotes = notes.filter((note) => note.name !== name);
   saveNotes(filteredNotes);
 
   return notes.length !== filteredNotes.length;
@@ -53,10 +51,8 @@ var removeNote = (pos) => {
 var logNote = (note) => {
   console.log('--');
   console.log(`pos: ${note.pos}`);
-  console.log(`name: ${note.name}`);
-  console.log(`weight: ${note.weight}`);
-  console.log(`species: ${note.species}`);
   console.log(`prize: ${note.prize}`);
+  console.log(`name: ${note.name}`);
 };
 
 module.exports = {
