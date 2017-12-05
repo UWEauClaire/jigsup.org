@@ -46,6 +46,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight:200;
     margin-bottom:30px;
+    height: 100%
 }
 
 h1  {
@@ -234,6 +235,7 @@ html {
 	text-align: center;
 	font-weight: 200;
 	width: 100%;
+  display: inline-block;
 }
 
 .carousel-control.left, .carousel-control.right {
