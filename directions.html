@@ -81,6 +81,8 @@
 								<li><a href="pastResults.html">Past Results</a></li>
 								<li role="presentation" class="divider"></li>
 								<li><a href="assets/2018_Rules_of_the_Tournament.pdf" target="_blank">Rules</a></li>
+								<li role="presentation" class="divider"></li>
+								<li><a href="assets/WIFA_details.pdf">WIFA Tournament</a></li>
 							</ul>
 						</li>
 						<li class="sliding-middle-out"><a href="prizes.html">Prizes</a></li>
@@ -170,10 +172,25 @@
 							</div>
 						</div>
 					</div>
+					<div class="panel panel-default">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									WIFA Tournament & Kids Klub
+								</h4>
+								<span class="glyphicon glyphicon-chevron-down expand-arrow"></span>
+							</div>
+						</a>
+						<div id="collapse3" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div id="map2" style="height: 450px; width:100%;"></div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-6">
 					<!-- <img alt "Lake Wissota Map" src="images/Map.png" class="img-responsive" alt="Lake Wissota Map"> -->
-					<div id="map" style="height: 700px; width: 600px;">
+					<div id="map" style="height: 700px; width: 100%;">
 					</div>
 				</div>
 
@@ -183,10 +200,8 @@
 					function initMap() {
 
 						var locations = [
-						['Kids Klub', 44.9254583,-91.3133903,3],
-						['WIFA High School Tournament', 44.9253737,-91.3141536,3],
 						['The View', 44.9261635, -91.3124309, 2],
-						['The Edge', 44.981204,-91.3425272, 1],
+						['The Edge', 44.981204,-91.3425272, 1]
 						];
 
 						var map = new google.maps.Map(document.getElementById('map'), {
@@ -202,7 +217,12 @@
 						for (i = 0; i < locations.length; i++) {
 							marker = new google.maps.Marker({
 								position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-								map: map
+								map: map,
+								label: {
+									text:locations[i][0],
+									color: 'black',
+									fontWeight: 'bold'
+								}
 							});
 
 							google.maps.event.addListener(marker, 'click', (function(marker, i) {
@@ -214,8 +234,57 @@
 						}
 					}
 
+					function initMap2() {
+
+						var locations2 = [
+						['Kids Klub', 44.9254583,-91.3133903,3],
+						['WIFA Tournament', 44.9253737,-91.3141536,3],
+						// ['The View', 44.9261635, -91.3124309, 2],
+						];
+
+						var map2 = new google.maps.Map(document.getElementById('map2'), {
+							zoom: 17,
+							center: new google.maps.LatLng(44.9275316,-91.3154554),
+							mapTypeId: google.maps.MapTypeId.ROADMAP
+						});
+
+						var infowindow2 = new google.maps.InfoWindow();
+
+						var marker2, i;
+
+						for (i = 0; i < locations2.length; i++) {
+							marker2 = new google.maps.Marker({
+								position: new google.maps.LatLng(locations2[i][1], locations2[i][2]),
+								map: map2,
+								label: {
+									text:locations2[i][0],
+									color: 'black',
+									fontWeight: 'bold'
+								}
+							});
+
+							google.maps.event.addListener(marker2, 'click', (function(marker, i) {
+								return function() {
+									infowindow2.setContent(locations[i][0]);
+									infowindow2.open(map2, marker);
+								}
+							})(marker2, i));
+						}
+
+
+					}
+
+					function initMaps() {
+						initMap();
+						initMap2();
+					}
+
+					//Method for when WIFA Tournament & Kids Klub tab gets shown, otherwise the image appears grey
+					$('#collapse3').on('shown.bs.collapse', function () {
+						google.maps.event.trigger(map2, "resize");
+					});
 				</script>
-				<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1IUIDhvPVhbJZRFE90daaIOKWi_mG7YM&callback=initMap"></script>
+				<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1IUIDhvPVhbJZRFE90daaIOKWi_mG7YM&callback=initMaps"></script>
 
 
 			</div>
