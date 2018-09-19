@@ -607,3 +607,7 @@ iframe {
   height: auto;
   width: 100px;
 }
+
+#sponsor {
+  vertical-align: middle;
+}
