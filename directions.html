@@ -197,92 +197,92 @@
 
 			<!-- GOOGLE MAPS INIT SCRIPT -->
 			<script type="text/javascript">
-			function initMap() {
+				function initMap() {
 
-				var locations = [
-					['The View', 44.9261635, -91.3124309, 2],
-					['The Edge', 44.981204,-91.3425272, 1]
-				];
+					var locations = [
+						['The View', 44.9261635, -91.3124309, 2],
+						['The Edge', 44.981204, -91.3425272, 1]
+					];
 
-				var map = new google.maps.Map(document.getElementById('map'), {
-					zoom: 13,
-					center: new google.maps.LatLng(44.9512752,-91.3190152),
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				});
-
-				var infowindow = new google.maps.InfoWindow();
-
-				var marker, i;
-
-				for (i = 0; i < locations.length; i++) {
-					marker = new google.maps.Marker({
-						position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-						map: map,
-						label: {
-							text:locations[i][0],
-							color: 'black',
-							fontWeight: 'bold'
-						}
+					var map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 13,
+						center: new google.maps.LatLng(44.9512752, -91.3190152),
+						mapTypeId: google.maps.MapTypeId.ROADMAP
 					});
 
-					google.maps.event.addListener(marker, 'click', (function(marker, i) {
-						return function() {
-							infowindow.setContent(locations[i][0]);
-							infowindow.open(map, marker);
-						}
-					})(marker, i));
+					var infowindow = new google.maps.InfoWindow();
+
+					var marker, i;
+
+					for (i = 0; i < locations.length; i++) {
+						marker = new google.maps.Marker({
+							position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+							map: map,
+							label: {
+								text: locations[i][0],
+								color: 'black',
+								fontWeight: 'bold'
+							}
+						});
+
+						google.maps.event.addListener(marker, 'click', (function(marker, i) {
+							return function() {
+								infowindow.setContent(locations[i][0]);
+								infowindow.open(map, marker);
+							}
+						})(marker, i));
+					}
 				}
-			}
 
-			function initMap2() {
+				function initMap2() {
 
-				var locations2 = [
-					['Kids Klub', 44.9254583,-91.3133903,3],
-					['WIFA Tournament', 44.9253737,-91.3141536,3],
-					// ['The View', 44.9261635, -91.3124309, 2],
-				];
+					var locations2 = [
+						['Kids Klub', 44.9254583, -91.3133903, 3],
+						['WIFA Tournament', 44.9253737, -91.3141536, 3],
+						// ['The View', 44.9261635, -91.3124309, 2],
+					];
 
-				var map2 = new google.maps.Map(document.getElementById('map2'), {
-					zoom: 17,
-					center: new google.maps.LatLng(44.9275316,-91.3154554),
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				});
-
-				var infowindow2 = new google.maps.InfoWindow();
-
-				var marker2, i;
-
-				for (i = 0; i < locations2.length; i++) {
-					marker2 = new google.maps.Marker({
-						position: new google.maps.LatLng(locations2[i][1], locations2[i][2]),
-						map: map2,
-						label: {
-							text:locations2[i][0],
-							color: 'black',
-							fontWeight: 'bold'
-						}
+					var map2 = new google.maps.Map(document.getElementById('map2'), {
+						zoom: 17,
+						center: new google.maps.LatLng(44.9275316, -91.3154554),
+						mapTypeId: google.maps.MapTypeId.ROADMAP
 					});
 
-					google.maps.event.addListener(marker2, 'click', (function(marker, i) {
-						return function() {
-							infowindow2.setContent(locations[i][0]);
-							infowindow2.open(map2, marker);
-						}
-					})(marker2, i));
+					var infowindow2 = new google.maps.InfoWindow();
+
+					var marker2, i;
+
+					for (i = 0; i < locations2.length; i++) {
+						marker2 = new google.maps.Marker({
+							position: new google.maps.LatLng(locations2[i][1], locations2[i][2]),
+							map: map2,
+							label: {
+								text: locations2[i][0],
+								color: 'black',
+								fontWeight: 'bold'
+							}
+						});
+
+						google.maps.event.addListener(marker2, 'click', (function(marker, i) {
+							return function() {
+								infowindow2.setContent(locations[i][0]);
+								infowindow2.open(map2, marker);
+							}
+						})(marker2, i));
+					}
+
+
 				}
 
+				function initMaps() {
+					initMap();
+					initMap2();
+				}
 
-			}
-
-			function initMaps() {
-				initMap();
-				initMap2();
-			}
-
-			//Method for when WIFA Tournament & Kids Klub tab gets shown, otherwise the image appears grey
-			$('#collapse3').on('shown.bs.collapse', function () {
-				google.maps.event.trigger(map2, "resize");
-			});
+				//Method for when WIFA Tournament & Kids Klub tab gets shown, otherwise the image appears grey
+				$('#collapse3').on('shown.bs.collapse', function() {
+					google.maps.event.trigger(map2, "resize");
+				});
 			</script>
 			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1IUIDhvPVhbJZRFE90daaIOKWi_mG7YM&callback=initMaps"></script>
 
