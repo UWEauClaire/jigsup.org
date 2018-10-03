@@ -510,6 +510,17 @@ input[type="radio"] {
   text-align: center;
 }
 
+.sponsorBarTitleImg {
+  margin: 1%;
+  width: 150px;
+  height: auto;
+  opacity: 0.50;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .sponsorBarImg {
   margin: 1%;
   width: 75px;
