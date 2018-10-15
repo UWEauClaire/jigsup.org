@@ -210,7 +210,7 @@ html {
   transition: all 200ms ease-in;
 }
 
-.dropdown:hover .dropdown-menu{  /*Hover Dropwdown menu*/
+.dropdown-menu{
   visibility: visible;
   display: block;
   opacity: 1;

@@ -1,0 +1,65 @@
+iframe {
+  border:2px solid lightgrey;
+  /*border-color:#e2e3e4;*/
+}
+
+.nav-link {
+  font-size: 1.5em;
+}
+
+.social-media {
+  height: 1.25em;
+}
+
+.logo {
+  width: 125px
+}
+
+.logo-rule {
+  border:none;
+  height:50px;
+  background-color:#edac1a;
+  z-index:-1;
+  position:relative;
+  top:-102px;
+}
+
+.mx-6 {
+  margin-left:10%;
+  margin-right:10%;
+}
+
+.bulletless-grey {
+  list-style: none;
+  border-left-style:solid;
+  border-left-width:6px;
+  border-left-color:#e2e3e4;
+  padding-left:30px;
+}
+
+.brand-blue {
+  color:#2b3e85 !important;
+}
+
+#brand-yellow {
+  color:#edac1a;
+}
+
+#banner{
+  margin-bottom:30px;
+}
+
+#navbarDropdown {
+  color:#2b3e85;
+}
+
+.title-sponsor {
+  max-height:175px;
+  max-width:200px;
+  opacity:0.50;
+}
+
+.sponsor {
+  max-height:85px;
+  opacity:0.50;
+}
