@@ -12,7 +12,7 @@ iframe {
 }
 
 .logo {
-  width: 125px
+  max-width: 125px
 }
 
 .logo-rule {
