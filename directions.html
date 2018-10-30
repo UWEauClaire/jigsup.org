@@ -91,29 +91,15 @@
 					<li class="sliding-middle-out"><a href="sponsors.html">Sponsors</a></li>
 					<li class="social-media">
 						<a target="_blank" class="fbook" href="https://www.facebook.com/pages/The-Jigs-Up-Ice-Fishing-Contest/736663866412522">
-							<img alt="Facebook Logo" src="images/facebook.png" class="fbook" </img>
-						</a>
-					</li>
-					<li>
-						<a alt="Twitter Logo" target="_blank" class="twitter" href="https://twitter.com/uwecrecreation">
-							<img src="images/twitter.png" class="twitter" </img>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" class="twitter" href="https://instagram.com/UWEC_Recreation/">
-							<img alt="Instagram Logo" src="images/instagram.png" class="fbook" </img>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" class="twitter" href="http://www.e-clubhouse.org/sites/lakewissota/">
-							<img alt="Lion's Club Logo" src="images/lclub.png" class="lclub" </img>
-						</a>
-					</li>
-				</ul>
+							<img alt="Facebook Logo" src="images/facebook.png" class="fbook" </img> </a> </li> <li>
+							<a alt="Twitter Logo" target="_blank" class="twitter" href="https://twitter.com/uwecrecreation">
+								<img src="images/twitter.png" class="twitter" </img> </a> </li> <li>
+								<a target="_blank" class="twitter" href="https://instagram.com/UWEC_Recreation/">
+									<img alt="Instagram Logo" src="images/instagram.png" class="fbook" </img> </a> </li> <li>
+									<a target="_blank" class="twitter" href="http://www.e-clubhouse.org/sites/lakewissota/">
+										<img alt="Lion's Club Logo" src="images/lclub.png" class="lclub" </img> </a> </li> </ul> </div> <!-- /.navbar-collapse -->
 			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container -->
+			<!-- /.container -->
 	</nav>
 </head>
 
@@ -153,7 +139,7 @@
 					<div id="collapse1" class="panel-collapse collapse ">
 						<div class="panel-body">
 							<iframe alt="The Edge Map" width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=The%20Edge%20Pub%20Lake%20Wissota%20Chippewa%20Falls%2C%20WI%2C%20United%20States&key=AIzaSyA1IUIDhvPVhbJZRFE90daaIOKWi_mG7YM"
-							allowfullscreen></iframe>
+							  allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
@@ -168,7 +154,8 @@
 					</a>
 					<div id="collapse2" class="panel-collapse collapse">
 						<div class="panel-body">
-							<iframe alt="The View Map" width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=The%20View%20Chippewa%20Falls%2C%20WI%2C%20United%20States&key=AIzaSyA1IUIDhvPVhbJZRFE90daaIOKWi_mG7YM" allowfullscreen></iframe>
+							<iframe alt="The View Map" width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=The%20View%20Chippewa%20Falls%2C%20WI%2C%20United%20States&key=AIzaSyA1IUIDhvPVhbJZRFE90daaIOKWi_mG7YM"
+							  allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
@@ -197,92 +184,92 @@
 
 			<!-- GOOGLE MAPS INIT SCRIPT -->
 			<script type="text/javascript">
-			function initMap() {
+				function initMap() {
 
-				var locations = [
-					['The View', 44.9261635, -91.3124309, 2],
-					['The Edge', 44.981204,-91.3425272, 1]
-				];
+					var locations = [
+						['The View', 44.9261635, -91.3124309, 2],
+						['The Edge', 44.981204, -91.3425272, 1]
+					];
 
-				var map = new google.maps.Map(document.getElementById('map'), {
-					zoom: 13,
-					center: new google.maps.LatLng(44.9512752,-91.3190152),
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				});
-
-				var infowindow = new google.maps.InfoWindow();
-
-				var marker, i;
-
-				for (i = 0; i < locations.length; i++) {
-					marker = new google.maps.Marker({
-						position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-						map: map,
-						label: {
-							text:locations[i][0],
-							color: 'black',
-							fontWeight: 'bold'
-						}
+					var map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 13,
+						center: new google.maps.LatLng(44.9512752, -91.3190152),
+						mapTypeId: google.maps.MapTypeId.ROADMAP
 					});
 
-					google.maps.event.addListener(marker, 'click', (function(marker, i) {
-						return function() {
-							infowindow.setContent(locations[i][0]);
-							infowindow.open(map, marker);
-						}
-					})(marker, i));
+					var infowindow = new google.maps.InfoWindow();
+
+					var marker, i;
+
+					for (i = 0; i < locations.length; i++) {
+						marker = new google.maps.Marker({
+							position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+							map: map,
+							label: {
+								text: locations[i][0],
+								color: 'black',
+								fontWeight: 'bold'
+							}
+						});
+
+						google.maps.event.addListener(marker, 'click', (function(marker, i) {
+							return function() {
+								infowindow.setContent(locations[i][0]);
+								infowindow.open(map, marker);
+							}
+						})(marker, i));
+					}
 				}
-			}
 
-			function initMap2() {
+				function initMap2() {
 
-				var locations2 = [
-					['Kids Klub', 44.9254583,-91.3133903,3],
-					['WIFA Tournament', 44.9253737,-91.3141536,3],
-					// ['The View', 44.9261635, -91.3124309, 2],
-				];
+					var locations2 = [
+						['Kids Klub', 44.9254583, -91.3133903, 3],
+						['WIFA Tournament', 44.9253737, -91.3141536, 3],
+						// ['The View', 44.9261635, -91.3124309, 2],
+					];
 
-				var map2 = new google.maps.Map(document.getElementById('map2'), {
-					zoom: 17,
-					center: new google.maps.LatLng(44.9275316,-91.3154554),
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				});
-
-				var infowindow2 = new google.maps.InfoWindow();
-
-				var marker2, i;
-
-				for (i = 0; i < locations2.length; i++) {
-					marker2 = new google.maps.Marker({
-						position: new google.maps.LatLng(locations2[i][1], locations2[i][2]),
-						map: map2,
-						label: {
-							text:locations2[i][0],
-							color: 'black',
-							fontWeight: 'bold'
-						}
+					var map2 = new google.maps.Map(document.getElementById('map2'), {
+						zoom: 17,
+						center: new google.maps.LatLng(44.9275316, -91.3154554),
+						mapTypeId: google.maps.MapTypeId.ROADMAP
 					});
 
-					google.maps.event.addListener(marker2, 'click', (function(marker, i) {
-						return function() {
-							infowindow2.setContent(locations[i][0]);
-							infowindow2.open(map2, marker);
-						}
-					})(marker2, i));
+					var infowindow2 = new google.maps.InfoWindow();
+
+					var marker2, i;
+
+					for (i = 0; i < locations2.length; i++) {
+						marker2 = new google.maps.Marker({
+							position: new google.maps.LatLng(locations2[i][1], locations2[i][2]),
+							map: map2,
+							label: {
+								text: locations2[i][0],
+								color: 'black',
+								fontWeight: 'bold'
+							}
+						});
+
+						google.maps.event.addListener(marker2, 'click', (function(marker, i) {
+							return function() {
+								infowindow2.setContent(locations[i][0]);
+								infowindow2.open(map2, marker);
+							}
+						})(marker2, i));
+					}
+
+
 				}
 
+				function initMaps() {
+					initMap();
+					initMap2();
+				}
 
-			}
-
-			function initMaps() {
-				initMap();
-				initMap2();
-			}
-
-			//Method for when WIFA Tournament & Kids Klub tab gets shown, otherwise the image appears grey
-			$('#collapse3').on('shown.bs.collapse', function () {
-				google.maps.event.trigger(map2, "resize");
-			});
+				//Method for when WIFA Tournament & Kids Klub tab gets shown, otherwise the image appears grey
+				$('#collapse3').on('shown.bs.collapse', function() {
+					google.maps.event.trigger(map2, "resize");
+				});
 			</script>
 			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1IUIDhvPVhbJZRFE90daaIOKWi_mG7YM&callback=initMaps"></script>
 
@@ -317,7 +304,7 @@
 			<a href="https://www.facebook.com/wissota.view.5" target="_blank"><img class="sponsorBarImg" src="images/sponsors/view.png" alt="The View"></a>
 			<a href="https://ttmtech.com/" target="_blank"><img class="sponsorBarImg" src="images/sponsors/ttmtech.png" alt="TTM Technologies"></a>
 			<a href="http://www.xtrememotorsportsllc.com/" target="_blank"><img class="sponsorBarImg" src="images/sponsors/XTREME MOTORSPORTS_2C_DIGITAL BLUE.png" alt="Xtreme Motorsports, LLCXtreme Motorsports, LLC"></a>
-			<a href="https://mydynamicfitness.com/" target="_blank"><img class="sponsorBarImg" src="images/sponsors/Dynamic-Logo-OnWhite.png" alt="Dynamic Fitness and Strength"></a>
+			<a href="http://www.lakewissotasandbar.com/" target="_blank"><img class="sponsorBarImg" src="images/sponsors/thesandbar.png" alt="The SandBar"></a>
 			<a href="http://www.leinie.com" target="_blank"><img class="sponsorBarImg" src="images/sponsors/lein.png" alt="Leinenkugel's"></a>
 			<a href="https://www.aceautomall.com/" target="_blank"><img class="sponsorBarImg" src="images/sponsors/AceAutoMall.png" alt="Ace Auto Mall"></a>
 		</div>
@@ -344,7 +331,7 @@
 				<a href="https://www.facebook.com/wissota.view.5" target="_blank"><img class="sponsorBarImg" src="images/sponsors/view.png" alt="The View"></a>
 				<a href="https://ttmtech.com/" target="_blank"><img class="sponsorBarImg" src="images/sponsors/ttmtech.png" alt="TTM Technologies"></a>
 				<a href="http://www.xtrememotorsportsllc.com/" target="_blank"><img class="sponsorBarImg" src="images/sponsors/XTREME MOTORSPORTS_2C_DIGITAL BLUE.png" alt="Xtreme Motorsports, LLCXtreme Motorsports, LLC"></a>
-				<a href="https://mydynamicfitness.com/" target="_blank"><img class="sponsorBarImg" src="images/sponsors/Dynamic-Logo-OnWhite.png" alt="Dynamic Fitness and Strength"></a>
+				<a href="http://www.lakewissotasandbar.com/" target="_blank"><img class="sponsorBarImg" src="images/sponsors/thesandbar.png" alt="The SandBar"></a>
 				<a href="http://www.leinie.com" target="_blank"><img class="sponsorBarImg" src="images/sponsors/lein.png" alt="Leinenkugel's"> </a>
 				<a href="https://www.aceautomall.com/" target="_blank"><img class="sponsorBarImg" src="images/sponsors/AceAutoMall.png" alt="Ace Auto Mall"></a>
 			</div>
