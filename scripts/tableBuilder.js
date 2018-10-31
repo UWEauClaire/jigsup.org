@@ -1,18 +1,18 @@
 //2017
-getFishWinnerFile("JSON/2017FishPrizeWinner.json", "2017FishPrizeWinner");
-getFishWinnerFile("JSON/2017RaffleWinner.json", "2017RaffleWinner");
-getSpeciesWinnerFile("JSON/2017SpeciesWinner.json", "2017SpeciesWinner");
+getFishWinnerFile("../JSON/2017FishPrizeWinner.json", "2017FishPrizeWinner");
+getFishWinnerFile("../JSON/2017RaffleWinner.json", "2017RaffleWinner");
+getSpeciesWinnerFile("../JSON/2017SpeciesWinner.json", "2017SpeciesWinner");
 
 //2016
-getFishWinnerFile("JSON/2016FishPrizeWinner.json", "2016FishPrizeWinner");
-get2016RaffleFile("JSON/2016RaffleWinner.json", "2016RaffleWinner");
+//getFishWinnerFile("../JSON/2016FishPrizeWinner.json", "2016FishPrizeWinner");
+//get2016RaffleFile("../JSON/2016RaffleWinner.json", "2016RaffleWinner");
 
 //2015
-getFishWinnerFile("JSON/2015FishPrizeWinner.json", "2015FishPrizeWinner");
-get2015RaffleFile("JSON/2015RaffleWinner.json", "2015RaffleWinner");
+//getFishWinnerFile("../JSON/2015FishPrizeWinner.json", "2015FishPrizeWinner");
+//get2015RaffleFile("../JSON/2015RaffleWinner.json", "2015RaffleWinner");
 
 //2014
-getFishWinnerFile("JSON/2014FishPrizeWinner.json", "2014FishPrizeWinner");
+//getFishWinnerFile("../JSON/2014FishPrizeWinner.json", "2014FishPrizeWinner");
 
 
 
