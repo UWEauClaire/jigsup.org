@@ -82,7 +82,18 @@ body {
   opacity:0.50;
 }
 
+.title-sponsor:hover {
+  max-height:175px;
+  max-width:200px;
+  opacity:1.0;
+}
+
 .sponsor {
   max-height:85px;
   opacity:0.50;
+}
+
+.sponsor:hover{
+  max-height:85px;
+  opacity:1.0;
 }
