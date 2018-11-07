@@ -100,52 +100,105 @@
 
     <div class="content container px-4">
       <div class="row">
-        <div class="col-12">
-          <h2 class="brand-blue">Schedule</h2>
-          <h5>Saturday, February 10th</h5>
+        <div class="col-md-6">
+          <h2 class="brand-blue">Contact Us</h2>
+      		<div class="contactForm">
+      			<form id="contact_form" action="http://formspree.io/recreation@uwec.edu" method="POST" onsubmit="return validateForm();" enctype="multipart/form-data">
+              <input type="hidden" name="_cc" value="poiriesj@uwec.edu" />
+      				<input type="text" name="_gotcha" style="display:none" />
+              <div class="row mx-1">
+                <label class="required" for="name"><b>Your name:<span style="color:red">*</span></b></label>
+              </div>
+              <div class="row mx-1 mb-2">
+    					  <input required id="name" name="name" type="text" value="" size="30" />
+              </div>
+              <div class="row mx-1">
+                <label class="required" for="email"><b>Your email:<span style="color:red">*</span></b></label>
+              </div>
+              <div class="row mx-1 mb-2">
+                <input required type="email" id="email" name="email" type="text" value="" size="30" />
+              </div>
+              <div class="row mx-1">
+                <label for="phone"><b>Your phone number:<span style="color:red">*</span></b></label>
+              </div>
+              <div class="row mx-1 mb-2">
+                <input id="phone" name="phone" type="text" value="" size="30" />
+              </div>
+              <div class="row mx-1 mb-3">
+                <label class="required" for="message"><b>Your message:<span style="color:red">*</span></b></label>
+                <textarea required id="message" name="message" rows="7" cols="60"></textarea>
+              </div>
+              <div class="row mx-1">
+                <button type="submit" class="btn btn-primary" value="Send">Send</button>
+              </div>
+            </form>
+      		</div>
+        </div>
+        <div class="col-md-6">
+          <h3 class="brand-blue">Committee Members</h3>
           <table class="table">
-            <thead scope="col">
+            <thead>
               <tr>
-                <th scope="col">Location</th>
-                <th scope="col">Time</th>
-                <th scope="col">Event</th>
+                <td scope="col">Name</td>
+                <td scope="col">Organization</td>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">Lake Wissota</th>
-                <td>7:00AM</td>
-                <td>Contest Begins! No need to pre-register, just head out to the ice.</td>
+                <td scope="row" class="name">Shari Breed</td>
+                <td class="organization">UWEC Recreation and Sport Operations</td>
               </tr>
               <tr>
-                <th scope="row">The View & The Edge Weight in Stations</th>
-                <td>9:00AM</td>
-                <td>Last Chance to purchase additional Fish Tickets for $40, available 7:00AM-9:00AM</td>
+                <td scope="row">Tammy Brunschmid</td>
+                <td>UWEC Recreation and Sport Operations</td>
               </tr>
               <tr>
-                <th scope="row">Lake Wissota</th>
-                <td>12:00PM</td>
-                <td>Kids Klub event on the ice in front of The View (Free lunch for kids), Prize drawings at 1:00PM</td>
+                <td scope="row">Mike Adams</td>
+                <td>Wissota Lions Club</td>
               </tr>
               <tr>
-                <th scope="row">The View & The Edge</th>
-                <td>2:00PM</td>
-                <td>Weigh-in Stations close, must be in line by 2:00PM <b>SHARP</b>! to register your fish</td>
+                <td scope="row">Bill Cunningham</td>
+                <td>Wissota Lions Club</td>
               </tr>
               <tr>
-                <th scope="row">The View</th>
-                <td>3:00PM</td>
-                <td>Raffle Prize drawing, tickets available for purchase until drawing begins</td>
+                <td scope="row">Chuck Daly</td>
+                <td>Wissota Lions Club</td>
               </tr>
               <tr>
-                <th scope="row">The View</th>
-                <td>4:00PM</td>
-                <td>Fish contest winners announced and prizes distributed</td>
+                <td scope="row">Andy Jepsen</td>
+                <td>UWEC Recreation and Sport Operations</td>
               </tr>
               <tr>
-                <th scope="row">The View</th>
-                <td>5:00PM</td>
-                <td>Stick around for music and fish stories at the bar</td>
+                <td scope="row">Jamie Kane</td>
+                <td>Scheels</td>
+              </tr>
+              <tr>
+                <td scope="row">Jill Millis</td>
+                <td>UWEC Athletics</td>
+              </tr>
+              <tr>
+                <td scope="row">Carl Mothes</td>
+                <td>Wissota Lions Club</td>
+              </tr>
+              <tr>
+                <td scope="row">Sheryl Poirier</td>
+                <td>UWEC Recreation and Sport Operations</td>
+              </tr>
+              <tr>
+                <td scope="row">Dave Prescher</td>
+                <td>Wissota Lions Club</td>
+              </tr>
+              <tr>
+                <td scope="row">Dan Schumacher</td>
+                <td>UWEC Athletics</td>
+              </tr>
+              <tr>
+                <td scope="row">Jan Thorsen</td>
+                <td>UWEC Recreation and Sport Operations</td>
+              </tr>
+              <tr>
+                <td scope="row">Al Wiberg</td>
+                <td>UWEC Recreation and Sport Operations</td>
               </tr>
             </tbody>
           </table>

@@ -97,3 +97,11 @@ body {
   max-height:85px;
   opacity:1.0;
 }
+
+.name {
+  font-style: normal;
+}
+
+.organization {
+  font-style: normal;
+}
