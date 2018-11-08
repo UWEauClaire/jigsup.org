@@ -105,3 +105,12 @@ body {
 .organization {
   font-style: normal;
 }
+
+.title-sponsors {
+  max-height:175px;
+  max-width:200px;
+}
+
+.sponsors {
+  max-height:85px;
+}
