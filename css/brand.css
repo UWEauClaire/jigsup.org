@@ -114,3 +114,21 @@ body {
 .sponsors {
   max-height:85px;
 }
+
+.button-brand {
+  background-color: #2b3e85;
+  color: #edac1a;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.button-brand:hover {
+  background-color: #edac1a;
+  color: #2b3e85;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
