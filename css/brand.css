@@ -90,11 +90,13 @@ body {
 
 .sponsor {
   max-height:85px;
+  min-height:70px;
   opacity:0.50;
 }
 
 .sponsor:hover{
   max-height:85px;
+  min-height:70px;
   opacity:1.0;
 }
 
@@ -113,6 +115,7 @@ body {
 
 .sponsors {
   max-height:85px;
+  min-height:70px;
 }
 
 .button-brand {
