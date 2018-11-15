@@ -135,3 +135,8 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+.nav-link:hover {
+  border-bottom-style: solid;
+  border-bottom-color: #2b3e85;
+}
