@@ -137,6 +137,8 @@ body {
 }
 
 .nav-link:hover {
+  padding-bottom: 4px;
   border-bottom-style: solid;
   border-bottom-color: #2b3e85;
+  border-bottom-width: 4px;
 }
