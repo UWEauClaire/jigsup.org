@@ -1,21 +1,26 @@
-function assembleTable(data) {
-	var table = $("#table").find("tbody");
-	data.forEach(function(item) {
-		var tableTR = $("<tr/>");
-		var html = '';
-		html += "<td><h4>"+item.firstName+"</h4></td>";
-		html += "<td><h4>"+item.lastName+"</h4></td>";
-		html += "<td><h4>"+item.fish+"</h4></td>";
-		html += "<td><h4>"+item.weight+"</h4></td>";
-		html += "<td><h4>"+moment(item.createdAt).format('h:mm:ss A')+"</h4></td>";
-		tableTR.append(html);
-		table.append(tableTR);
-	});
-};
+$(document).ready(function(){
 
-$.ajax({
-  url: 'https://jigsup-entry.herokuapp.com/moreInfo/0',
-  type: 'PUT',
-  data: ,
-  success:
-})
+	function assembleTable(data) {
+		var count = 0;
+		var table = document.getElementById("#table");
+		console.log('here i am');
+		console.log('this is the returned data', data);
+		data.forEach(function(item) {
+			var row = table.insertRow(count);
+			var firstName = row.insertCell(0);
+			var lastName = row.insertCell(1);
+			var fish = row.insertCell(2);
+			var weight = row.insertCell(3);
+			var time = row.insertCell(4);
+		});
+	};
+
+	$.ajax({
+  	url: 'https://jigsup-entry.herokuapp.com/moreInfo/0',
+  	type: 'PUT',
+		dataType: 'json',
+  	success: function(object) {
+			assembleTable(object);
+		}
+	}).responseJSON;
+});
