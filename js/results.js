@@ -3,8 +3,6 @@ $(document).ready(function(){
 	function assembleTable(data) {
 		var count = 0;
 		var table = document.getElementById("tablebody");
-		console.log('here i am');
-		console.log('this is the returned data', data);
 		console.log(data.list);
 		data.list.forEach(function(item) {
 			if(count < 10) {
