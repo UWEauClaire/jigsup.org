@@ -5,10 +5,11 @@ function assembleTable(data) {
 	data.list.forEach(function(item) {
 		if(count < 10) {
 			var row = table.insertRow(count);
-			var head = row.insertCell(0).innerHTML = item.firstName;
-			row.insertCell(1).innerHTML = item.lastName;
-			row.insertCell(2).innerHTML = item.fish;
-			row.insertCell(3).innerHTML = item.weight;
+			row.insertCell(0).innerHTML = item.ticketNumber;
+			row.insertCell(1).innerHTML = item.firstName;
+			row.insertCell(2).innerHTML = item.lastName;
+			row.insertCell(3).innerHTML = item.fish;
+			row.insertCell(4).innerHTML = item.weight;
 			count++;
 		}
 	});
@@ -20,18 +21,20 @@ function updateTable(data) {
 	data.list.forEach(function(item) {
 		if(count < table.rows.length) {
 			var row = table.rows[count];
-			row.cells[0].innerHTML = item.firstName;
-			row.cells[1].innerHTML = item.lastName;
-			row.cells[2].innerHTML = item.fish;
-			row.cells[3].innerHTML = item.weight;
+			row.cells[0].innerHTML = item.ticketNumber;
+			row.cells[1].innerHTML = item.firstName;
+			row.cells[2].innerHTML = item.lastName;
+			row.cells[3].innerHTML = item.fish;
+			row.cells[4].innerHTML = item.weight;
 			count++;
 		}else {
 			if(count < 10) {
 				var row = table.insertRow(count);
-				var head = row.insertCell(0).innerHTML = item.firstName;
-				row.insertCell(1).innerHTML = item.lastName;
-				row.insertCell(2).innerHTML = item.fish;
-				row.insertCell(3).innerHTML = item.weight;
+				row.insertCell(0).innerHTML = item.ticketNumber;
+				row.insertCell(1).innerHTML = item.firstName;
+				row.insertCell(2).innerHTML = item.lastName;
+				row.insertCell(3).innerHTML = item.fish;
+				row.insertCell(4).innerHTML = item.weight;
 				count++;
 			}
 		}
