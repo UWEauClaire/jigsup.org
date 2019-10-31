@@ -1,5 +1,3 @@
-
-
 function createFooter() {
     document.getElementById("footer").innerHTML = 
     "<div class=\"row mx-6\">" +
