@@ -52,6 +52,10 @@ body {
   margin-right:10%;
 }
 
+.carousel-item > img {
+  margin: auto;
+}
+
 .bulletless-grey {
   list-style: none;
   border-left-style:solid;
