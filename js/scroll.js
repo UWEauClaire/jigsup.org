@@ -32,7 +32,6 @@ function pageScroll() {
 }
 
 var start = document.getElementById("table");
-start.style.display = "block";
 start.style.width = (.95 * window.innerWidth).toString() + 'px';
 start.style.height = (.95 * window.innerHeight).toString() + 'px';
 start.style.marginTop = ((window.innerHeight - parseInt(start.style.height, 10))/ 2).toString() + 'px';
