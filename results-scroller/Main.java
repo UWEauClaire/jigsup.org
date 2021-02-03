@@ -1,13 +1,10 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -22,45 +19,7 @@ public class Main {
 		ArrayList<Entry> entries = assembleEntries(fishList);
 		ArrayList<Winner> winners = assembleWinners(entries, prizes);
 		//printList(entries);
-		ArrayList<Entry> largestBySpecies = getSpeciesWinners(entries);
-		createHTML(winners, largestBySpecies);
-	}
-	
-	private static ArrayList<Entry> getSpeciesWinners(ArrayList<Entry> entries) {
-		ArrayList<Entry> winners = new ArrayList<Entry>();
-		int i = 0;
-		boolean northern = false;
-		boolean walleye = false;
-		boolean bass = false;
-		boolean panfish = false;
-		Iterator<Entry> itr = entries.iterator();
-		while (itr.hasNext() && winners.size() < 4) {
-			Entry entry = itr.next();
-			String species = entry.getFish();
-			species = species.toLowerCase();
-			
-			if (species.equals("northern")) {
-				if(!northern) {
-					northern = true;
-					winners.add(entry);
-				}
-			}else {
-				if (species.equals("walleye")) {
-					if(!walleye) {
-						walleye = true;
-						winners.add(entry);
-					}
-				}else {
-					if(!species.equals("bass")) {
-						if(!panfish) {
-							panfish = true;
-							winners.add(entry);	
-						}
-					}
-				}
-			}
-		}
-		return winners;
+		createHTML(winners);
 	}
 	
 	private static void printList(ArrayList<Entry> entries) {
@@ -71,8 +30,7 @@ public class Main {
 	}
 
 	private static ArrayList<Entry> assembleEntries(File csv) {
-		int i = 1;
-		ArrayList<Entry> entries = new ArrayList<Entry>();
+		ArrayList<Entry> entries = new ArrayList<>();
 		try {
 			Scanner scnr = new Scanner(csv);
 			scnr.nextLine();
@@ -89,7 +47,6 @@ public class Main {
 				time = scnr2.next();
 				scnr2.next();
 				entries.add(new Entry(first, last, fish, weight, time));
-				i++;
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -99,7 +56,7 @@ public class Main {
 	}
 	
 	private static ArrayList<Prize> assemblePrizes(File csv) {
-		ArrayList<Prize> prizes = new ArrayList<Prize>();
+		ArrayList<Prize> prizes = new ArrayList<>();
 		try {
 			Scanner scnr = new Scanner(csv);
 			scnr.nextLine();
@@ -109,7 +66,7 @@ public class Main {
 				String prize;
 				Scanner scnr2 = new Scanner(scnr.nextLine());
 				scnr2.useDelimiter(",");
-				place = Integer.valueOf(scnr2.next());
+				place = Integer.parseInt(scnr2.next());
 				prize = scnr2.next();
 				Prize newPrize = new Prize(place, prize);
 				prizes.add(newPrize);
@@ -122,22 +79,24 @@ public class Main {
 	}
 	
 	private static ArrayList<Winner>assembleWinners(ArrayList<Entry> entries, ArrayList<Prize> prizes) {
-		ArrayList<Winner> winners = new ArrayList<Winner>();
+		ArrayList<Winner> winners = new ArrayList<>();
 		int i = 0;
 		Iterator<Prize> prize = prizes.iterator();
 		while(i < entries.size() && prize.hasNext()) {
 			Winner winner = new Winner(entries.get(i), prize.next());
 			winners.add(winner);
-			if(i < 24) {
+			if(i < 19) {
 				i++;
-			}else {
-				i += 5;
+			}else if(i < 479) {
+				i += 10;
+			} else {
+				i++;
 			}
 		}
 		return winners;
 	}
 
-	private static void createHTML(ArrayList<Winner> winners, ArrayList<Entry> largestBySpecies) {
+	private static void createHTML(ArrayList<Winner> winners) {
 		try {
 				PrintStream output = new PrintStream(new FileOutputStream("scroll.html"));
 				output.println("<!doctype html>");
@@ -148,8 +107,7 @@ public class Main {
 				output.println("\t<title>Jigsup Winners</title>");
 				output.println("</head>");
 				output.println("<body style='max-width: 100%'>");
-				Iterator<Winner> itr = winners.iterator();
-				output.println("\t<div id='table' class='row mx-0' style='display:none' width='1920px'>");
+				output.println("\t<div id='table' class='row mx-0' style='display:block' width='1920px'>");
 				output.println("\t\t<div class='col-10 mx-auto'>");
 				output.println("\t\t\t<h1 class='text-center' style='font-size: 100px; color: #2b3e85'>Winners List</h1>");
 				output.println("\t\t\t<table class='table table-bordered table-striped mt-4 mb-0'>");
@@ -167,7 +125,7 @@ public class Main {
 				output.println("\t\t\t<div id='scrollable' style='height:500px; overflow-y:scroll; overflow-x:hidden;'>");
 				output.println("\t\t\t\t<table class='table table-bordered table-striped'>");
 				output.println("\t\t\t\t\t<tbody>");
-				itr = winners.iterator();
+				Iterator<Winner> itr = winners.iterator();
 				while(itr.hasNext()) {
 					Winner winner = itr.next();
 					output.println("\t\t\t\t\t\t<tr>");

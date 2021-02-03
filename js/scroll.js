@@ -7,32 +7,26 @@ function pageScroll() {
   scrollable.scrollTop = scrollable.scrollTop + direction;
   var location = scrollable.scrollTop;
   var max = scrollable.scrollHeight - parseInt(scrollable.style.height);
-  var mid = max / 2;
   if(location == 0) {
     direction = 1;
   }else {
-    if(location == (scrollable.scrollHeight - parseInt(scrollable.style.height, 10))){
+    if(location > (max)){
       direction = -1;
     }else {
-      if(location < 2) {
+      if(location < 3) {
         time = 1250;
       } else if(location > max - 2) {
         time = 1250;
-      }else if(location < 1000) {
-        time = 25;//25 - 3.4 * Math.log(location);
       }else {
-        if(location > max - 1000) {
-          time = 25;//25 - 3.4 * Math.log(max - location);
-        }else {
-          time = 25;
-        }
+        time = 25;
       }
     }
   }
-  //console.log("Location: " + location);
-  //console.log("Max: " + max);
-  //console.log("Mid: " + mid);
-  //console.log("Time: " + time);
+  
+  // console.log("Location: " + location);
+  // console.log("Max: " + max);
+  // console.log("Time: " + time);
+  // console.log("Direction: " + direction)
 
   timeout = setTimeout('pageScroll()', time);
 }
