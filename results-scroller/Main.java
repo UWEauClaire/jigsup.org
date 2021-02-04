@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -11,15 +12,18 @@ public class Main {
 	
 	static String fishFile = "entries.csv";
 	static String prizeFile = "prizes.csv";
+	static String raffleFile = "raffleprizes.csv";
 	
 	public static void main(String[] args) {
 		File fishList = getCSVFile(fishFile);
 		File prizeList = getCSVFile(prizeFile);
+		File raffleList = getCSVFile(raffleFile);
 		ArrayList<Prize> prizes = assemblePrizes(prizeList);
+		ArrayList<Prize> raffleprizes = assemblePrizes(raffleList);
 		ArrayList<Entry> entries = assembleEntries(fishList);
 		ArrayList<Winner> winners = assembleWinners(entries, prizes);
 		//printList(entries);
-		createHTML(winners);
+		createHTML(winners, raffleprizes);
 	}
 	
 	private static void printList(ArrayList<Entry> entries) {
@@ -96,7 +100,7 @@ public class Main {
 		return winners;
 	}
 
-	private static void createHTML(ArrayList<Winner> winners) {
+	private static void createHTML(ArrayList<Winner> winners, ArrayList<Prize> raffleprizes) {
 		try {
 				PrintStream output = new PrintStream(new FileOutputStream("scroll.html"));
 				output.println("<!doctype html>");
@@ -136,6 +140,26 @@ public class Main {
 					output.println("\t\t\t\t\t\t\t<td width='10%'>" + winner.getEntry().getFish() + "</td>");
 					output.println("\t\t\t\t\t\t\t<td width='10%'>" + winner.getEntry().getWeight() + "</td>");
 					output.println("\t\t\t\t\t\t</tr>");
+				}
+				output.println("\t\t\t\t\t\t<tr>");
+				output.println("\t\t\t\t\t\t\t<td></td>");
+				output.println("\t\t\t\t\t\t\t<th style='font-size: large'>Raffle Prize Winners</th>");
+				output.println("\t\t\t\t\t\t\t<td></td>");
+				output.println("\t\t\t\t\t\t\t<td></td>");
+				output.println("\t\t\t\t\t\t\t<td></td>");
+				output.println("\t\t\t\t\t\t\t<td></td>");
+				output.println("\t\t\t\t\t\t</tr>");
+				Iterator<Prize> itr1 = raffleprizes.iterator();
+				while(itr1.hasNext()) {
+					Prize prize = itr1.next();
+					output.println("\t\t\t\t\t\t<tr>");
+					output.println("\t\t\t\t\t\t\t<th scope='row' width='5%'>" + prize.getPlace() + "</th>");
+					output.println("\t\t\t\t\t\t\t<td width='45%'>" + prize.getName() + "</td>");
+//					output.println("\t\t\t\t\t\t\t<td width='15%'></td>");
+//					output.println("\t\t\t\t\t\t\t<td width='15%'></td>");
+//					output.println("\t\t\t\t\t\t\t<td width='10%'></td>");
+//					output.println("\t\t\t\t\t\t\t<td width='10%'></td>");
+//					output.println("\t\t\t\t\t\t</tr>");
 				}
 				output.println("\t\t\t\t\t</tbody>");
 				output.println("\t\t\t\t</table>");
