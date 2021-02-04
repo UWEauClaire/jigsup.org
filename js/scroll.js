@@ -7,10 +7,10 @@ function pageScroll() {
   scrollable.scrollTop = scrollable.scrollTop + direction;
   var location = scrollable.scrollTop;
   var max = scrollable.scrollHeight - parseInt(scrollable.style.height);
-  if(location == 0) {
+  if(location <= 0) {
     direction = 1;
   }else {
-    if(location > (max)){
+    if(location >= max){
       direction = -1;
     }else {
       if(location < 3) {
