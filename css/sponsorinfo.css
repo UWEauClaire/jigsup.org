@@ -1,13 +1,24 @@
 .platinum {
+    border: 0px;
     background-color: #3B3838;
     color: white
 }
 
 .gold {
+    border: 0px;
     background-color: #C08F00;
     color: white;
 }
 
 .silver {
+    border: 0px;
     background-color: #AEAAAA;
+}
+
+.empty {
+    border: 0px;
+}
+
+td, th {
+    border-right: 1px solid black;
 }
