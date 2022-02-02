@@ -1,9 +1,10 @@
+package JavaCode;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -27,8 +28,7 @@ public class Main {
 	}
 	
 	private static void printList(ArrayList<Entry> entries) {
-		for(int i = 0; i < entries.size(); i++) {
-			Entry entry = entries.get(i);
+		for (Entry entry : entries) {
 			System.out.println("First: " + entry.getFirst() + "|Last: " + entry.getLast() + "|Fish: " + entry.getFish() + "|Weight: " + entry.getWeight() + "|Time: " + entry.getTime().toString());
 		}
 	}
@@ -102,20 +102,18 @@ public class Main {
 
 	private static void createHTML(ArrayList<Winner> winners, ArrayList<Prize> raffleprizes) {
 		try {
-			PrintStream output = new PrintStream(new FileOutputStream("scroll.html"));
+			PrintStream output = new PrintStream(new FileOutputStream("results.html"));
 			output.println("<!doctype html>");
 			output.println("<html land='en'>");
 			output.println("<head>");
 			output.println("\t<meta charset='utf-8'>");
-			output.println("<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS' crossorigin='anonymous'>");
+			output.println("\t<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS' crossorigin='anonymous'>");
 			output.println("\t<title>Jigsup Winners</title>");
 			output.println("</head>");
 			output.println("<body style='max-width: 100%'>");
 			output.println("\t<div id='table' class='row mx-0' style='display:block' width='1920px'>");
 			output.println("\t\t<div class='col-10 mx-auto'>");
 			output.println("\t\t\t<h1 class='text-center' style='font-size: 100px; color: #2b3e85'>Winners List</h1>");
-			output.println("\t\t\t<table class='table table-bordered table-striped mt-4 mb-0'>");
-			output.println("\t\t\t</table>");
 			output.println("\t\t\t<div id='scrollable' style='height:500px; overflow-y:scroll; overflow-x:hidden;'>");
 			output.println("\t\t\t\t<table class='table table-bordered table-striped'>");
 			output.println("\t\t\t\t\t<tbody>");
@@ -135,23 +133,23 @@ public class Main {
 			output.println("\t\t\t\t\t\t\t<th colspan='6' style='font-size: x-large'>Fish Prize Winners</th>");
 			output.println("\t\t\t\t\t\t</tr>");
 			output.println("\t\t\t\t\t\t<tr>");
-			output.println("\t\t\t\t\t\t\t<th>Place</th>");
-			output.println("\t\t\t\t\t\t\t<th>Contestant</th>");
-			output.println("\t\t\t\t\t\t\t<th>Ticket #</th>");
-			output.println("\t\t\t\t\t\t\t<th>Weight</th>");
-			output.println("\t\t\t\t\t\t\t<th>Species</th>");
-			output.println("\t\t\t\t\t\t\t<th>Prize</th>");
+			output.println("\t\t\t\t\t\t\t<th width='5%'>Place</th>");
+			output.println("\t\t\t\t\t\t\t<th width='30%'>Contestant</th>");
+			output.println("\t\t\t\t\t\t\t<th width='10%'>Ticket #</th>");
+			output.println("\t\t\t\t\t\t\t<th width='10%'>Weight</th>");
+			output.println("\t\t\t\t\t\t\t<th width='10%'>Species</th>");
+			output.println("\t\t\t\t\t\t\t<th width='35%'>Prize</th>");
 			output.println("\t\t\t\t\t\t</tr>");
 			Iterator<Winner> itr = winners.iterator();
 			while(itr.hasNext()) {
 				Winner winner = itr.next();
 				output.println("\t\t\t\t\t\t<tr>");
-				output.println("\t\t\t\t\t\t\t<th scope='row' width='5%'>" + winner.getPrize().getPlace() + "</th>");
-				output.println("\t\t\t\t\t\t\t<td width='30%'>" + winner.getEntry().getFirst() + " " + winner.getEntry().getLast() + "</td>");
-				output.println("\t\t\t\t\t\t\t<td width='10%'>" + winner.getEntry().getTicket() + "</td>");
-				output.println("\t\t\t\t\t\t\t<td width='10%'>" + winner.getEntry().getWeight() + "</td>");
-				output.println("\t\t\t\t\t\t\t<td width='10%'>" + winner.getEntry().getFish() + "</td>");
-				output.println("\t\t\t\t\t\t\t<td width='35%'>" + winner.getPrize().getName() + "</td>");
+				output.println("\t\t\t\t\t\t\t<th>" + winner.getPrize().getPlace() + "</th>");
+				output.println("\t\t\t\t\t\t\t<td>" + winner.getEntry().getFirst() + " " + winner.getEntry().getLast() + "</td>");
+				output.println("\t\t\t\t\t\t\t<td>" + winner.getEntry().getTicket() + "</td>");
+				output.println("\t\t\t\t\t\t\t<td>" + winner.getEntry().getWeight() + "</td>");
+				output.println("\t\t\t\t\t\t\t<td>" + winner.getEntry().getFish() + "</td>");
+				output.println("\t\t\t\t\t\t\t<td>" + winner.getPrize().getName() + "</td>");
 				output.println("\t\t\t\t\t\t</tr>");
 			}
 
@@ -228,10 +226,6 @@ public class Main {
 			output.println("\t\t\t</div>");
 			output.println("\t\t</div>");
 			output.println("\t</div>");
-			output.println("\t<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script>");
-			output.println("\t<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js' integrity='sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut' crossorigin='anonymous'></script>");
-			output.println("\t<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>");
-			output.println("\t<script src='./js/scroll.js'></script>");
 			output.println("\t<style>");
 			output.println("\t::-webkit-scrollbar {");
 			output.println("\t\tdisplay: none;");

@@ -1,3 +1,5 @@
+package JavaCode;
+
 import java.sql.Time;
 
 public class Entry {
@@ -13,7 +15,7 @@ public class Entry {
 		this.last = last;
 		this.ticket = ticket;
 		this.fish = fish;
-		this.weight = Double.valueOf(weight);
+		this.weight = Double.parseDouble(weight);
 		time = time.substring(0, time.length()-3);
 		this.time = Time.valueOf(time);
 	}

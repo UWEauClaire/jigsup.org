@@ -1,3 +1,4 @@
+package JavaCode;
 
 public class Prize {
 	private int place;
