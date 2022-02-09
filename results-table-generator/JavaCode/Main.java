@@ -66,12 +66,10 @@ public class Main {
 			scnr.nextLine();
 			scnr.nextLine();
 			while(scnr.hasNextLine()) {
-				int place = 0;
-				String prize;
 				Scanner scnr2 = new Scanner(scnr.nextLine());
 				scnr2.useDelimiter(",");
-				place = Integer.parseInt(scnr2.next());
-				prize = scnr2.next();
+				int place = Integer.parseInt(scnr2.next());
+				String prize = scnr2.next();
 				Prize newPrize = new Prize(place, prize);
 				prizes.add(newPrize);
 			}
