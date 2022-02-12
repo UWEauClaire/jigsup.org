@@ -43,7 +43,7 @@ function updateTable(data) {
 
 function getData() {
 	$.ajax({
-		url: 'https://jigsuplist.strecks.net/8b312c90-46af-4316-a762-7656b22a07f6',
+		url: 'https://jigsuplist.strecks.net/a87d518e-396b-4dd1-aca1-720289559c57',
 		type: 'GET',
 		dataType: 'json',
 		success: function(object) {
