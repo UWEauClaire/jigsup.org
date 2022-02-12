@@ -37,7 +37,7 @@ public class Main {
 		ArrayList<Entry> entries = new ArrayList<>();
 		try {
 			Scanner scnr = new Scanner(csv);
-			scnr.nextLine();
+			//scnr.nextLine();
 			while(scnr.hasNextLine()) {
 				String first, last, ticket, fish, weight, time;
 				Scanner scnr2 = new Scanner(scnr.nextLine());
@@ -46,10 +46,10 @@ public class Main {
 				first = scnr2.next();
 				last = scnr2.next();
 				//scnr2.next();
+				time = scnr2.next();
 				fish = scnr2.next();
 				weight = scnr2.next();
-				time = scnr2.next();
-				scnr2.next();
+				//scnr2.next();
 				entries.add(new Entry(first, last, ticket, fish, weight, time));
 			}
 		} catch (FileNotFoundException e) {
